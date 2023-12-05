@@ -45,7 +45,7 @@ CREATE TABLE `Expenses` (
     `paid` BOOLEAN,
     `date_paid` DATE,
     PRIMARY KEY(`lodged`)
-)
+);
 
 -- MAINTENANCE_REQUESTs are for recording defects and items that need attention 
 CREATE TABLE `Maintenance_Request` (
@@ -55,19 +55,19 @@ CREATE TABLE `Maintenance_Request` (
     `title` VARCHAR(128),
     `description` TEXT(512),
     `image` VARCHAR(32),
-    PRIMARY KEY(`maintenance_no`)
+    PRIMARY KEY(`request_no`)
 );
 
 -- log of maintenance as it is conducted
 CREATE TABLE `Maintenace_Log` (
-    `log_no`INT AUTO_INCREMENT,
+    `log_no` INT AUTO_INCREMENT,
     `request_no` INT,
     `notes` TEXT(512),
     `image` VARCHAR(32),
     `account_no` INT NOT NULL,
     `closed` BOOLEAN,
     `updated` DATETIME,
-    PRIMARY KEY('log_no')
+    PRIMARY KEY(`log_no`)
 );
 
 CREATE TABLE `Bookings` (
