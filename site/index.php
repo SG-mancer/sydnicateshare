@@ -27,6 +27,7 @@ if(!isset($_SESSION["access"])){
         <li><a href="view_log.php">check maintenance log</a></li>
         <li>review bookings</li>
         <li>book upcoming usage</li>
+        <li><a href="access/processlogout.php">LOGOUT</a></li>
     </ul>
     
 </body>

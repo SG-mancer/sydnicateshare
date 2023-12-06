@@ -13,8 +13,7 @@ session_start();
 </head>
 
 <body>
-  <header> <img src="../images/accommodation.png" alt="Accommodation">
-    <h1>Admin Login</h1>
+    <h1>Login</h1>
   </header>
 
 <?php
@@ -35,8 +34,8 @@ session_start();
             </div>
             <button type="submit">Login</button>
         </form>
-  <footer> 
-    <a href="../allCabins.php">View All Cabins</a> 
+  <footer>
+
   </footer>
 </body>
 </html>
