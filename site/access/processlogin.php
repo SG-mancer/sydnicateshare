@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (mysqli_num_rows($result) > 0) {
-        // Login Successful - set session access and redirect to menu
+        // Login Successful - set session access and redirect to index/menu
         $row = mysqli_fetch_assoc($result);
 
         $_SESSION["account_no"] = $row["account_no"];

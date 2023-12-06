@@ -20,7 +20,7 @@ CREATE TABLE `Syndicate_User` (
     `username` VARCHAR(32) UNIQUE,
     `password` VARCHAR(32),
     `contact_no` VARCHAR(32),
-    PRIMARY KEY(`USERNAME`)
+    PRIMARY KEY(`account_no`)
 );
 
 -- COSTS are expenses paid for my account holders i.e. repairs paid for out of pocket
@@ -59,7 +59,7 @@ CREATE TABLE `Maintenance_Request` (
 );
 
 -- log of maintenance as it is conducted
-CREATE TABLE `Maintenace_Log` (
+CREATE TABLE `Maintenance_Log` (
     `log_no` INT AUTO_INCREMENT,
     `request_no` INT,
     `notes` TEXT(512),

@@ -5,29 +5,33 @@ if(!isset($_SESSION["access"])){
     //redirect to login if not valid
     header("Location: access/login.php");
 }else {
-    //no need to valid login to access this page
-    require_once('../dbconfig.php');
-
-    try{
-        //create a connection database and check if there was an error
-        if(!$db = @mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME)) {
-            throw new Exception("Connection failed: ".mysql_connect_error());
-        }
-    } catch (Exception $e) {
-        print("<h1>Connection Failed:</h1>" . $e-> getMessage());
-    }
-}
+    //show page of login valid
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Syndicate Share - home</title>
 </head>
 <body>
     logged in
+
+    <ul>
+        <li><a href="new_cost.php">lodge spending</a></li>
+        <li><a href="view_cost.php">view all costs</a></li>
+        <li><a href="new_maintenance_req.php">add maintenance request</a></li>
+        <li><a href="view_maint.php">check maintenance requests</a></li>
+        <li><a href="view_log.php">check maintenance log</a></li>
+        <li>review bookings</li>
+        <li>book upcoming usage</li>
+    </ul>
     
 </body>
 </html>
+
+<?php
+}
+?>
