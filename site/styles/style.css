@@ -1,0 +1,27 @@
+:root {
+    --color1: #74dbf6;
+    --color2: #0d3932;
+}
+
+li a {
+    /* for buttons in a table or list */
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 4px;
+    text-decoration: none;
+    background-color: var(--color1); /*with white fff has contrast of 11.8:1 */
+    color: var(--color2);
+    border: 1px solid var(--color2);
+    border-radius: 4px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
